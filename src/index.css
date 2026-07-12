@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+}
+
+:root {
+  /* Corporate ERP Light Theme */
+  --background: #f4f5f7;
+  --foreground: #172b4d;
+  --card: #ffffff;
+  --card-foreground: #172b4d;
+  --popover: #ffffff;
+  --popover-foreground: #172b4d;
+  --primary: #0052cc;
+  --primary-foreground: #ffffff;
+  --secondary: #ebecf0;
+  --secondary-foreground: #42526e;
+  --muted: #f4f5f7;
+  --muted-foreground: #5e6c84;
+  --accent: #deebff;
+  --accent-foreground: #0052cc;
+  --destructive: #bf2600;
+  --destructive-foreground: #ffffff;
+  --border: #dfe1e6;
+  --input: #fafbfc;
+  --ring: #4c9aff;
+  
+  --success: #006644;
+  --warning: #ff8b00;
+}
+
+[data-theme="dark"] {
+  /* Corporate ERP Dark Theme */
+  --background: #0e121b;
+  --foreground: #c1c7d0;
+  --card: #161b22;
+  --card-foreground: #c1c7d0;
+  --popover: #161b22;
+  --popover-foreground: #c1c7d0;
+  --primary: #4c9aff;
+  --primary-foreground: #ffffff;
+  --secondary: #21262d;
+  --secondary-foreground: #8b949e;
+  --muted: #21262d;
+  --muted-foreground: #8b949e;
+  --accent: #1f2a3c;
+  --accent-foreground: #4c9aff;
+  --destructive: #f85149;
+  --destructive-foreground: #ffffff;
+  --border: #30363d;
+  --input: #0d1117;
+  --ring: #58a6ff;
+  
+  --success: #238636;
+  --warning: #d29922;
+}
+
+[data-theme="futuristic"] {
+  /* Tech / Movie / Cyber Theme */
+  --background: #090e11;
+  --foreground: #e0f2fe;
+  --card: #111820;
+  --card-foreground: #e0f2fe;
+  --popover: #111820;
+  --popover-foreground: #e0f2fe;
+  --primary: #06b6d4; /* Teal / Cyan neon */
+  --primary-foreground: #082f49;
+  --secondary: #164e63;
+  --secondary-foreground: #e0f2fe;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #083344;
+  --accent-foreground: #22d3ee;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #0f172a;
+  --ring: #06b6d4;
+  
+  --success: #10b981;
+  --warning: #f59e0b;
+}
+
+[data-theme="sunset-glow"] {
+  /* Warm Sunset Theme */
+  --background: #fff8f6;
+  --foreground: #4a1c15;
+  --card: #ffffff;
+  --card-foreground: #4a1c15;
+  --popover: #ffffff;
+  --popover-foreground: #4a1c15;
+  --primary: #f97316; /* Orange */
+  --primary-foreground: #ffffff;
+  --secondary: #ffedd5;
+  --secondary-foreground: #c2410c;
+  --muted: #ffedd5;
+  --muted-foreground: #9a3412;
+  --accent: #fed7aa;
+  --accent-foreground: #ea580c;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #fdba74;
+  --input: #fff7ed;
+  --ring: #f97316;
+  
+  --success: #16a34a;
+  --warning: #ea580c;
+}
+
+[data-theme="emerald-forest"] {
+  /* Rich Green/Nature Theme */
+  --background: #f0fdf4;
+  --foreground: #14532d;
+  --card: #ffffff;
+  --card-foreground: #14532d;
+  --popover: #ffffff;
+  --popover-foreground: #14532d;
+  --primary: #10b981; /* Emerald */
+  --primary-foreground: #ffffff;
+  --secondary: #d1fae5;
+  --secondary-foreground: #047857;
+  --muted: #d1fae5;
+  --muted-foreground: #065f46;
+  --accent: #a7f3d0;
+  --accent-foreground: #059669;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #6ee7b7;
+  --input: #ecfdf5;
+  --ring: #10b981;
+  
+  --success: #059669;
+  --warning: #d97706;
+}
+
+[data-theme="minimal"] {
+  /* Black & White High Contrast Theme */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000; /* Black */
+  --primary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #111827;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #e5e7eb;
+  --accent-foreground: #000000;
+  --destructive: #000000;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #000000;
+  
+  --success: #000000;
+  --warning: #000000;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.1s ease, color 0.1s ease;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Glassmorphism removed in favor of solid corporate colors */
+.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+/* Custom scrollbars - Corporate style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* ERP Table Base Styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+tbody tr:hover {
+  background-color: var(--muted);
+}
+tr:last-child td {
+  border-bottom: none;
+}
+

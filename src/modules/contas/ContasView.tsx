@@ -129,8 +129,9 @@ export const ContasView: React.FC = () => {
       await AccountRepository.create({
         name,
         type,
-        bank: bank || undefined,
+        bank: bank || '',
         color,
+        icon: 'Landmark',
         initialBalance: initialBalanceNum,
         currentBalance: initialBalanceNum,
         description: description || undefined,

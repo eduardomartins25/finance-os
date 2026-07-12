@@ -69,10 +69,10 @@ export const BackupService = {
 
     // Zera metas e cofres
     const gls = await GoalRepository.getAll();
-    for (const g of gls) await GoalRepository.update(g.id, { savedAmount: 0 });
+    for (const g of gls) await GoalRepository.update(g.id, { valorAtual: 0 });
 
     const sfs = await SafeRepository.getAll();
-    for (const s of sfs) await SafeRepository.update(s.id, { balance: 0 });
+    for (const s of sfs) await SafeRepository.update(s.id, { saldoAtual: 0 });
 
     // Zera orçamentos
     const bgs = await BudgetRepository.getAll();
@@ -94,7 +94,7 @@ export const BackupService = {
     ];
 
     for (const { repo, name } of collections) {
-      const items = await (repo.getAllActive ? repo.getAllActive() : repo.getAll());
+      const items = await ((repo as any).getAllActive ? (repo as any).getAllActive() : (repo as any).getAll());
       for (const item of items) {
         await deleteDoc(doc(db, name, item.id));
       }
